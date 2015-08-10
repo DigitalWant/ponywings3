@@ -42,7 +42,7 @@ Mouth.draw = function(){
 			//console.log('yDisp 100 pony die');
 
 		}else{
-
+			alert('tesg')
 
 				mouthCTX.save();
 				mouthCTX.translate(-200,-95);
