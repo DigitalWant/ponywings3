@@ -76,6 +76,7 @@ HUD.enterFrame = function(){
 		HUD.awesome *= 0.25;
 		HUD.timer-=(1/(60*30)-pony.vel.x*(1/(60*30))*(1/20));
 		
+
 		if(HUD.groundvel<pony.vel.x){
 			HUD.groundvel = pony.vel.x;
 		}
