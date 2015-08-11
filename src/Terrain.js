@@ -34,9 +34,9 @@ terrain.newNode = function() {
     terrain.nodes[terrain.nodes.length - 1].x = terrain.nodes[terrain.nodes.length - 2].x + Math.random() * 150 * 0.5 + 250; //原始值radom没有0.5
 
     if (terrain.nodes[terrain.nodes.length - 2].y < 130) {
-        terrain.nodes[terrain.nodes.length - 1].y = 0;//280 + Math.random() * 70; //200原始值
+        terrain.nodes[terrain.nodes.length - 1].y = 280 + Math.random() * 70; //200原始值
     } else {
-        terrain.nodes[terrain.nodes.length - 1].y = 0;//80 - Math.random() * 70; //130原始值
+        terrain.nodes[terrain.nodes.length - 1].y = 80 - Math.random() * 70; //130原始值
     }
 }
 
