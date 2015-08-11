@@ -43,15 +43,15 @@ Mouth.draw = function(){
 			
 
 			
-			if (pony.coord.y<-180){
+			if (pony.coord.y<-280){
 				//非常高的时候，嘴巴略往后靠
-				//mouthCTX.save();
+				mouthCTX.save();
 				//console.log('PWG.gScale 0.2');
 				//mouthCTX.translate(-260,400);
-				//mouthCTX.translate(-230,-95);
-				//mouthCTX.drawImage( Mouth.mouthDown, -28, 270*(1-0.05*Math.abs(Math.sin(Mouth.waveTimer*1000))), 296, 279 );
-				//mouthCTX.drawImage( Mouth.mouthUp, -20, -10*(1-0.5*Math.abs(Math.sin(Mouth.waveTimer*1000))), 296, 279 );
-				//mouthCTX.restore();
+				mouthCTX.translate(-230,-95);
+				mouthCTX.drawImage( Mouth.mouthDown, -28, 270*(1-0.05*Math.abs(Math.sin(Mouth.waveTimer*1000))), 296, 279 );
+				mouthCTX.drawImage( Mouth.mouthUp, -20, -10*(1-0.5*Math.abs(Math.sin(Mouth.waveTimer*1000))), 296, 279 );
+				mouthCTX.restore();
 
 			} else {
 
