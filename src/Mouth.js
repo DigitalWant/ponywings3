@@ -22,8 +22,6 @@ Mouth.draw = function(){
 	// SCALE / TRANSLATE DEPENDING ON PONY
 
 	// Draw Mouth
-
-
 	if(pony.startMoving){
 		//console.log('startMoving');
 		//PWG.gScale*=9;
@@ -44,14 +42,28 @@ Mouth.draw = function(){
 		}else{
 			
 
+			
+			if (pony.coord.y<-180){
+				//非常高的时候，嘴巴略往后靠
+				mouthCTX.save();
+				//console.log('PWG.gScale 0.2');
+				//mouthCTX.translate(-260,400);
+				//mouthCTX.translate(-230,-95);
+				//mouthCTX.drawImage( Mouth.mouthDown, -28, 270*(1-0.05*Math.abs(Math.sin(Mouth.waveTimer*1000))), 296, 279 );
+				//mouthCTX.drawImage( Mouth.mouthUp, -20, -10*(1-0.5*Math.abs(Math.sin(Mouth.waveTimer*1000))), 296, 279 );
+				mouthCTX.restore();
+
+			} else {
+
 				mouthCTX.save();
 				mouthCTX.translate(-200,-95);
 				mouthCTX.drawImage( Mouth.mouthDown, -8, 270*(1-0.05*Math.abs(Math.sin(Mouth.waveTimer*1000))), 296, 279 );
 				mouthCTX.drawImage( Mouth.mouthUp, 0, -10*(1-0.5*Math.abs(Math.sin(Mouth.waveTimer*1000))), 296, 279 );
 				mouthCTX.restore();
 
+			}
 
-			/**/
+
 			// if (pony.coord.y<-280){
 			// 	mouthCTX.save();
 			// 	//console.log('PWG.gScale 0.2');
