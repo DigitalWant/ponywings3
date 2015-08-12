@@ -64,8 +64,17 @@ menu.toggleAudio = function(){
 menu.gameover = function(){
 	menu.isGameOver = true;
 	document.getElementById("screen").style.display = "block";
+	document.getElementById("ending").style.display = "block";
 	document.getElementById("gameover").style.display = "block";
 	document.getElementById("pause").style.display = "none";
-	PWG.pauseGame();
-	HUD.printStats();
+
+	setTimeout(function(){
+		PWG.pauseGame();
+		HUD.printStats();
+	},2000)
+
 }
+// menu.showPoint = function(){
+// 		PWG.pauseGame();
+// 		HUD.printStats();
+// }

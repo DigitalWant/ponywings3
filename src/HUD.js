@@ -109,7 +109,7 @@ HUD.enterFrame = function(){
 	}
 	
 	// POINTS
-	document.getElementById('points').innerHTML = HUD.points+"m";
+	document.getElementById('points').innerHTML = HUD.points;
 	HUD.points = Math.floor(pony.coord.x/100);
 	if(HUD.points<0){
 		HUD.points=0;

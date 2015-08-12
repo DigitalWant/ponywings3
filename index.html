@@ -9,6 +9,7 @@
     <base target="_blank" />
     <link rel="icon" type="image/ico" href="art/favicon/scootwing.ico?">
     <!-- Add the following three tags inside head -->
+    <meta charset="UTF-8">
     <meta itemprop="name" content="Pony Wings">
     <meta itemprop="description" content="This would be a description of the content your users are sharing">
     <meta itemprop="image" content="http://ponywings.nutcasenightmare.com">
@@ -59,15 +60,16 @@
                 <span style="position:absolute;right:0;bottom:0;margin:10px" id="points">0</span>
             </div>
             <div id="screen">
+                <div id="ending"></div>
                 <div id="shade"></div>
                 <div id="container">
                     <div class="center0">
                         <div class="center1">
                             <div class="center2">
-                                <div id='pause' class="screenMenu">
+                                <div id='pause' class="screenMenu" style="top:80px;position:relative;">
                                     <div class='title' style="background-position:0 -100px;"></div>
                                     <div class='stats' id='main' style='font-size:16px'>
-                                        <br>to resume flight
+                                        <br>按开始继续
                                         <div id='homeScreen'>
                                             <img src='art/icon/HomeScreen.png' />
                                             <div>
@@ -79,11 +81,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id='gameover' class="screenMenu" style="top:40px;">
+                                <div id='gameover' class="screenMenu" style="top:80px;">
                                     <div class="center2" style="width:400px;">
-                                        <div class='title' style="background-position:0 -50px;"></div>
                                         <div class='stats' id='main'>
-                                            Scootaloo flew <span id='stats_points'>1337m</span> today!
+                                            <span id='stats_points'>0</span>
                                         </div>
                                         <div class='stats'>
                                             <div id='desc'>max altitude</div>
@@ -97,7 +98,7 @@
                                             <div id='desc'>parasprites</div>
                                             <div id='score'><span id='stats_parasprites'>20</span></div>
                                         </div>
-                                        <div class='stats' id='main' style='margin-top:10px;font-size:16px'>
+                                        <div class='stats'>
                                             Press Restart button or S to Start a new day
                                         </div>
                                         <div class='stats' id='yougotta'>
@@ -119,16 +120,16 @@
                                             <!-- Place this tag where you want the +1 button to render 
                                                     <g:plusone size='tall'></g:plusone>
                                                 </div>-->
-                                            <!-- THE SITE -->
+                                            <!-- THE SITE
                                             <a href='http://ponywings.nutcasenightmare.com'>
                                                 <img src='art/icon/PonyWingsSite.png' width='60' height='60' class='gotta_button' />
-                                            </a>
+                                            </a> -->
                                             <!-- EMBED 
                                                 <div class='gotta_button' id='gb_embed'></div>-->
-                                            <!-- MOBILE -->
+                                            <!-- MOBILE
                                             <a href='http://ponywings.nutcasenightmare.com'>
                                                 <div class='gotta_button' id='gb_mobile' style='margin-right:0px'></div>
-                                            </a>
+                                            </a> -->
                                         </div>
                                     </div>
                                 </div>
