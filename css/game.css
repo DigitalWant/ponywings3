@@ -168,12 +168,14 @@ img {
 
 #yougotta {
     /*width:350px;*/
-    width: 285px;
+	width: 320px;
     height: 120px;
+    text-align: center;
 }
 
 #yougotta .gotta_button {
-    float: left;
+    /*float: left;*/
+        display: inline-block;
     margin-right: 5px;
 }
 

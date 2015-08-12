@@ -6,6 +6,8 @@ menu.init = function(){
 	document.getElementById("screen").style.display = "none";
 	document.getElementById("pause").style.display = "block";
 	document.getElementById("gameover").style.display = "none";
+	document.getElementById("ending").style.display = "none";
+
 }
 
 menu.play = function(){
@@ -24,6 +26,8 @@ menu.pause = function(){
 		if(!menu.isPaused){
 			document.getElementById("screen").style.display = "block";
 			document.getElementById('instructions').style.display='none';
+			document.getElementById("ending").style.display = "none";
+
 			PWG.pauseGame();
 		}
 		menu.isPaused = true;
@@ -68,10 +72,8 @@ menu.gameover = function(){
 	document.getElementById("gameover").style.display = "block";
 	document.getElementById("pause").style.display = "none";
 
-	setTimeout(function(){
 		PWG.pauseGame();
 		HUD.printStats();
-	},2000)
 
 }
 // menu.showPoint = function(){
