@@ -22,7 +22,9 @@ canvas,
 img {
     border: 0;
 }
-
+#instructions #tips{
+	background:transparent url("../art/tips.png") no-repeat scroll left top;
+}
 #background {
     background: rgba(20, 232, 255, 1);
     background: -moz-linear-gradient(top, rgba(20, 232, 255, 1) 0%, rgba(150, 243, 199, 1) 100%);
@@ -69,9 +71,10 @@ img {
     margin: 0 auto 0 auto;
     display: none;
 }
+
 #screen > #ending {
-	display: none;
-	background:transparent url("../art/ending.jpg") no-repeat left top;
+    display: none;
+    background: transparent url("../art/ending.jpg") no-repeat left top;
 }
 
 #screen > #shade {
@@ -98,7 +101,14 @@ img {
     background: url('../art/Buttons.png');
     cursor: pointer;
 }
-
+#instructions {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background:transparent url("../art/tips.png") no-repeat scroll center center;
+	width: 480px;
+	height: 300px;
+}
 .hud_button#breset {
     background-position: -120px 0;
 }
@@ -121,13 +131,12 @@ img {
 
 #gameover {
     position: relative;
-    background:transparent url('../art/boardFont.png') no-repeat scroll center top;
+    background: transparent url('../art/boardFont.png') no-repeat scroll center top;
 }
 
 #gameover #main.stats {
-	padding-bottom: 60px;
+    padding-bottom: 60px;
 }
-
 
 .title {
     margin: 0 auto 0 auto;
@@ -168,14 +177,14 @@ img {
 
 #yougotta {
     /*width:350px;*/
-	width: 320px;
+    width: 320px;
     height: 120px;
     text-align: center;
 }
 
 #yougotta .gotta_button {
     /*float: left;*/
-        display: inline-block;
+    display: inline-block;
     margin-right: 5px;
 }
 
