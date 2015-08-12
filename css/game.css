@@ -66,6 +66,8 @@ img {
 #progress {
 	display: block;
 	background-image: none;
+animation-name:none;
+    -webkit-animation-name: none;
 }
 @-webkit-keyframes blinker {  
     0% { opacity: 1.0; }
