@@ -83,7 +83,7 @@ PWG.init = function(){
 
 }
 
-PWG.artAssets = 7;
+PWG.artAssets = 10;
 PWG.loadArtAssets = function(){
 	
 	if(gameIsMobile){
@@ -115,7 +115,7 @@ PWG.loadArtAssets = function(){
 	// Mouth.image.src = "art/mouth.png";
 
 	//薯片材质
-	terrain.chipImage.src = "art/chip.jpg";
+	//terrain.chipImage.src = "art/chip.jpg";
 
 	if(!gameIsMobile){
 		background.cloud.src = "art/Cloud.png";
@@ -133,27 +133,36 @@ PWG.loadArtAssets = function(){
 	}
 	
 }
+PWG.showTip = function(){
 
-PWG.onAssetLoad = function(){
-	PWG.artAssets--;
-	//alert(PWG.artAssets);
-	if(PWG.artAssets==0){
-		
-		// Music
-		//music.play();
-		//menu.toggleAudio();
-		document.getElementById("bmusic").className = "hud_button toggle";
-		
 		// Remove Loading Screen
 		document.getElementById("loading").style.display = "none";
 		document.getElementById("game_container").style.display = "block";
-		gameIsLoaded = true;
+
+}
+PWG.tipEnd = function(){
+		// Music
+		music.play();
+		menu.toggleAudio();
+		document.getElementById("bmusic").className = "hud_button toggle";
 		
+		// Remove Loading Screen
+		gameIsLoaded = true;		
 		PWG.startTheGame();
+}
+PWG.onAssetLoad = function(){
+	PWG.artAssets--;
+	//alert(PWG.artAssets);
+	document.getElementById("progress").textContent = "LOADING "+ (100-PWG.artAssets*10)+"%";
 
+	if(PWG.artAssets==0){
 
+		//show start button
+		document.getElementById("start").style.display = "block";
+		document.getElementById("progress").style.display = "none";
 
 	}
+
 }
 PWG.startTheGame = function(){
 	PWG.enterFrame(); PWG.draw(); PWG.playGame();

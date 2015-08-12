@@ -35,14 +35,20 @@
     <div id="content">
         <!-- CANVAS DOM -->
         <div id="background">
-            <div id='loading'></div>
+            <div id='loading'>
+                <div id="progress">9</div>
+                <div id="start" 
+                ontouchstart="PWG.showTip();" 
+                onclick='PWG.showTip();'></div>
+            </div>
         </div>
         <div id="game_container" style='display:none;'>
-            <canvas id="game" width="480" height="300"> </canvas>
+            <canvas id="game" width="480" height="300"></canvas>
             <canvas id="hud" width="480" height="300"></canvas>
             <canvas id="mouth" width="480" height="300"></canvas>
-            <div id='instructions' style='opacity:1'>
-<!--                 <div class='title' style="position:absolute;top:20px;left:20px;"></div>
+            <div id='instructions' style='opacity:1' ontouchstart='PWG.tipEnd();' onclick='PWG.tipEnd();' >
+
+<!--        <div class='title' style="position:absolute;top:20px;left:20px;"></div>
                 <div class="tips">
                     <img src="art/tips.png" />
                 </div> -->
@@ -69,9 +75,7 @@
                                             <img src='art/icon/HomeScreen.png' />
                                             <div>
                                                 <span id='title'><br>PLAY ME as a FULLSCREEN APP<br></span>
-                                                <span style='font-size:12px;'>
-                                                        Open up your mobile browser's menu below<br>And select Add to Home Screen
-                                                    </span>
+                                                <span style='font-size:12px;'>Open up your mobile browser's menu below<br>And select Add to Home Screen</span>
                                             </div>
                                         </div>
                                     </div>
