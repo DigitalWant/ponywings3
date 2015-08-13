@@ -76,7 +76,3 @@ menu.gameover = function(){
 		HUD.printStats();
 
 }
-// menu.showPoint = function(){
-// 		PWG.pauseGame();
-// 		HUD.printStats();
-// }

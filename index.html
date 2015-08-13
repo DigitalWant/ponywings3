@@ -95,7 +95,7 @@
                                         </div>
                                         <div class='stats' id='yougotta' style="display:block;">
                                             <div class='gotta_button'>
-                                                <img src="art/button/actionBtn.png" ontouchstart="" onclick=''/>
+                                                <img src="art/button/actionBtn.png" ontouchstart="" onclick='' />
                                             </div>
                                             <div class='gotta_button'>
                                                 <img src="art/button/again.png" ontouchstart="if(pony.startMoving){PWG.pauseGame();PWG.init();PWG.startTheGame();}" onclick='if(pony.startMoving){PWG.pauseGame();PWG.init();PWG.startTheGame();}' />
@@ -131,6 +131,7 @@
             drawFrameRate = 1000 / 60;
             enterFrameRate = 1000 / 60;
         }
+
         canvas = document.getElementById('game');
         ctx = canvas.getContext('2d');
         hudCanvas = document.getElementById('hud');
@@ -197,15 +198,15 @@
             PWG.init();
             fullScreen();
         }
-        
+
 
         //百度的代码
         var _hmt = _hmt || [];
         (function() {
-          var hm = document.createElement("script");
-          hm.src = "//hm.baidu.com/hm.js?8eee0978707e0cc2e3fdfcc0a4687c4c";
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8eee0978707e0cc2e3fdfcc0a4687c4c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
         })();
         </script>
     </div>
