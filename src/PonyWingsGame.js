@@ -150,6 +150,9 @@ PWG.tipEnd = function(){
 		gameIsLoaded = true;		
 		PWG.startTheGame();
 }
+PWG.inviteFriend = function(){
+		document.getElementById("invite").style.display = "block";
+}
 PWG.onAssetLoad = function(){
 	PWG.artAssets--;
 	//alert(PWG.artAssets);
@@ -167,7 +170,8 @@ PWG.onAssetLoad = function(){
 PWG.startTheGame = function(){
 	PWG.enterFrame(); PWG.draw(); PWG.playGame();
 	document.getElementById("screen").style.display = "none";
-	
+			document.getElementById("invite").style.display = "block";
+
 	// If Not Home Screen Web App
 	if(notHomeScreened && !PWG.alreadyNotified){
 		menu.pause();

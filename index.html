@@ -18,7 +18,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent" />
     <link rel="apple-touch-icon-precomposed" href="art/icon/IconScootBack.png" />
-    <link rel="apple-touch-startup-image" href="art/Loading.jpg" />
+    <link rel="apple-touch-startup-image" href="art/loading.jpg" />
     <script>
     function BlockMove(event) {
         if (!gameIsLoaded || !menu.isGameOver) {
@@ -36,22 +36,15 @@
         <!-- CANVAS DOM -->
         <div id="background">
             <div id='loading'>
-                <div id="progress">9</div>
-                <div id="start" 
-                ontouchstart="PWG.showTip();" 
-                onclick='PWG.showTip();'></div>
+                <div id="progress">LOADING...</div>
+                <div id="start" ontouchstart="PWG.showTip();" onclick='PWG.showTip();'></div>
             </div>
         </div>
         <div id="game_container" style='display:none;'>
             <canvas id="game" width="480" height="300"></canvas>
             <canvas id="hud" width="480" height="300"></canvas>
             <canvas id="mouth" width="480" height="300"></canvas>
-            <div id='instructions' style='opacity:1' ontouchstart='PWG.tipEnd();' onclick='PWG.tipEnd();' >
-
-<!--        <div class='title' style="position:absolute;top:20px;left:20px;"></div>
-                <div class="tips">
-                    <img src="art/tips.png" />
-                </div> -->
+            <div id='instructions' style='opacity:1' ontouchstart='PWG.tipEnd();' onclick='PWG.tipEnd();'>
             </div>
             <div id="hud_screen">
                 <div style="position:absolute;top:0;right:220px;margin:10px;width:150px">
@@ -102,36 +95,11 @@
                                         </div>
                                         <div class='stats' id='yougotta' style="display:block;">
                                             <div class='gotta_button'>
-                                                <img src="art/button/actionBtn.png" />
+                                                <img src="art/button/actionBtn.png" ontouchstart="" onclick=''/>
                                             </div>
                                             <div class='gotta_button'>
                                                 <img src="art/button/again.png" ontouchstart="if(pony.startMoving){PWG.pauseGame();PWG.init();PWG.startTheGame();}" onclick='if(pony.startMoving){PWG.pauseGame();PWG.init();PWG.startTheGame();}' />
                                             </div>
-                                            <!-- FACEBOOK 
--->
-                                            <!-- TWITTER 
-                                                <div class='gotta_button social' style='margin-right:3px'>
-                                                    <a href='https://twitter.com/share' class='twitter-share-button' id='twitter_thing'
-                                                        data-url='http://ponywings.nutcasenightmare.com' 
-                                                        data-text='Today I roller-scooted and flew across the hills of Equestria! Play Pony Wings:' 
-                                                        data-count='vertical'
-                                                        data-via='ncasenmare'>Tweet</a>
-                                                </div>-->
-                                            <!-- GOOGLE 
-                                                <div class='gotta_button social'>-->
-                                            <!-- Place this tag where you want the +1 button to render 
-                                                    <g:plusone size='tall'></g:plusone>
-                                                </div>-->
-                                            <!-- THE SITE
-                                            <a href='http://ponywings.nutcasenightmare.com'>
-                                                <img src='art/icon/PonyWingsSite.png' width='60' height='60' class='gotta_button' />
-                                            </a> -->
-                                            <!-- EMBED 
-                                                <div class='gotta_button' id='gb_embed'></div>-->
-                                            <!-- MOBILE
-                                            <a href='http://ponywings.nutcasenightmare.com'>
-                                                <div class='gotta_button' id='gb_mobile' style='margin-right:0px'></div>
-                                            </a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -139,6 +107,7 @@
                         </div>
                     </div>
                 </div>
+                <div id="invite"></div>
             </div>
         </div>
         <!-- Import JS files -->
@@ -228,6 +197,16 @@
             PWG.init();
             fullScreen();
         }
+        
+
+        //百度的代码
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?8eee0978707e0cc2e3fdfcc0a4687c4c";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
         </script>
     </div>
 </body>
