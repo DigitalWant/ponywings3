@@ -203,6 +203,7 @@ img {
 #screen > #invite {
 	display: none;
 	background:transparent url("../art/invite.png") no-repeat center center;
+    background-size: cover;
 }
 #hud_screen {
     position: absolute;
