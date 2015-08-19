@@ -4,7 +4,7 @@
 
 <head>
     <!-- SOME METAINFO  -->
-    <title>PONY WINGS</title>
+    <title>浪里求生记</title>
     <LINK href="css/game.css" rel="stylesheet" type="text/css">
     <base target="_blank" />
     <link rel="icon" type="image/ico" href="art/favicon/scootwing.ico?">
@@ -51,7 +51,7 @@
                     <div class="hud_button" id="bmusic" ontouchstart='menu.toggleAudio();' onclick='menu.toggleAudio();'></div>
                     <div class="hud_button" id="bpause" ontouchstart='menu.togglePause();' onclick='menu.togglePause();'></div>
                 </div>
-                <span style="position:absolute;right:0;bottom:0;margin:10px" id="points">0</span>
+                <span style="position:absolute;right:30px;bottom:20px;margin:10px" id="points">0</span>
             </div>
             <div id="screen">
                 <div id="ending"></div>
@@ -95,7 +95,7 @@
                                         </div>
                                         <div class='stats' id='yougotta' style="display:block;">
                                             <div class='gotta_button'>
-                                                <img src="art/button/actionBtn.png" ontouchstart="" onclick='' />
+                                                <img src="art/button/actionBtn.png" ontouchstart="PWG.inviteFriend();" onclick='PWG.inviteFriend();' />
                                             </div>
                                             <div class='gotta_button'>
                                                 <img src="art/button/again.png" ontouchstart="if(pony.startMoving){PWG.pauseGame();PWG.init();PWG.startTheGame();}" onclick='if(pony.startMoving){PWG.pauseGame();PWG.init();PWG.startTheGame();}' />
@@ -145,7 +145,7 @@
 
             var viewportWidth = window.innerWidth;
             var viewportHeight = window.innerHeight;
-            var ratioW = (1 + (1 - 480 / viewportWidth) + 0.1).toFixed(2);
+            var ratioW = (1 + (1 - 480 / viewportWidth) + 0.2).toFixed(2);
             var ratioH = (1 + (1 - 300 / viewportHeight) + 0.04).toFixed(2);
             //console.log(ratioW,',',ratioH);
             var xPosition = (viewportWidth - 480) / 2;
@@ -168,10 +168,12 @@
             if (window.innerHeight > window.innerWidth) {
                 //alert("Please use Landscape! 请使用横屏");
                 //PWG.pauseGame();
+                document.body.className = "needRotate";
 
             } else {
+                document.body.className = "noNeed";
                 if (pony.startMoving == false) {
-                    console.log('not moving')
+                    //console.log('not moving')
                     PWG.loadArtAssets();
                     PWG.init();
 
@@ -192,8 +194,11 @@
 
         if (window.innerHeight > window.innerWidth) {
             //alert("Please use Landscape! 请使用横屏");
+            document.body.className = "needRotate";
 
         } else {
+            document.body.className = "noNeed";
+
             PWG.loadArtAssets();
             PWG.init();
             fullScreen();

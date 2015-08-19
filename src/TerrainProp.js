@@ -107,7 +107,8 @@ prop.enterFrame = function(){
 			}
 			if( xxx>-pony.width*0.5 && xxx<pony.width*0.5 && yyy>-pony.height && yyy<0 ){
 				prop.parasprites[i].life = 20;
-				//alert("CAUGHT");
+				// alert("CAUGHT");
+				eat.play();
 				pony.vel.x*=1.1;
 				pony.vel.y*=1.2;
 				HUD.parasprites++;

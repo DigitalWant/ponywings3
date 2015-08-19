@@ -6,8 +6,41 @@ body {
     margin: 0;
     padding: 0;
     font-family: Helvetica, Arial, sans-serif;
-}
+   background: rgb(69, 231, 194);
 
+
+}
+body.needRotate:after {
+    content:" ";
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background:transparent url('../art/rotate.png') no-repeat scroll center center;
+    background-size:cover;
+}
+body.needRotate:before{
+    content: " ";
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-size:contain;
+    background:transparent url('../art/rotateHint.png') no-repeat scroll center center;
+
+    -webkit-animation-name: rotation;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+body.needRotate #content {
+    display: none;
+}
 canvas,
 #background,
 #screen,
@@ -22,10 +55,10 @@ canvas,
 img {
     border: 0;
 }
-
+/*
 #instructions #tips {
     background: transparent url("../art/tips.png") no-repeat scroll left top;
-}
+}*/
 
 #background {
     background: rgba(20, 232, 255, 1);
@@ -44,12 +77,13 @@ img {
     background: url('../art/loading.jpg');
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 100% 100%;
 }
 
 #start,
 #progress {
     display: none;
-    background: transparent url('../art/button/startGame.png') no-repeat scroll left top;
+    background: transparent url('../art/button/startGame.png') no-repeat scroll 50% 95%;
     width: 169px;
     height: 74px;
     position: absolute;
@@ -64,7 +98,12 @@ img {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-
+#start {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
 #progress {
     display: block;
     background-image: none;
@@ -95,6 +134,30 @@ img {
         opacity: 1.0;
     }
 }
+@-webkit-keyframes rotation {
+    0% {
+        -webkit-transform:rotate(-90deg)  ;
+    }
+    50% {
+        -webkit-transform:rotate(0deg)  ;
+    }
+    100% {
+        -webkit-transform:rotate(-90deg)  ;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform:rotate(-90deg)  ;
+    }
+    50% {
+        transform:rotate(0deg)  ;
+    }
+    100% {
+        transform:rotate(-90deg)  ;
+    }
+}
+
 
 
 /** CENTER **/
@@ -127,6 +190,9 @@ img {
 #screen > #ending {
     display: none;
     background: transparent url("../art/ending.jpg") no-repeat left top;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
 }
 
 #screen > #shade {
@@ -164,6 +230,9 @@ img {
     background: transparent url("../art/tips.png") no-repeat scroll center center;
     width: 480px;
     height: 300px;
+        background-size: 65%;
+        background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .hud_button#breset {
@@ -189,6 +258,7 @@ img {
 #gameover {
     position: relative;
     background: transparent url('../art/boardFont.png') no-repeat scroll center top;
+        background-size: contain;
 }
 
 #gameover #main.stats {
