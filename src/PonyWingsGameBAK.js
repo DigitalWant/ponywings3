@@ -2,7 +2,7 @@ var PWG = {};
 PWG.timer_enterFrame = null;
 PWG.timer_draw = null;
 PWG.playGame = function() {
-    //console.log(PWG.timer_enterFrame,PWG.timer_draw);
+    console.log(PWG.timer_enterFrame,PWG.timer_draw);
     if (PWG.timer_enterFrame == null){
         PWG.timer_enterFrame = setInterval(PWG.enterFrame, enterFrameRate);
         PWG.timer_draw = setInterval(PWG.draw, drawFrameRate);        
@@ -156,8 +156,6 @@ PWG.tipEnd = function() {
     music.play();
     menu.toggleAudio();
     document.getElementById("bmusic").className = "hud_button toggle";
-    document.getElementById("instructions").style.display = "none";
-
 
     // Remove Loading Screen
     gameIsLoaded = true;

@@ -44,8 +44,9 @@
             <canvas id="game" width="480" height="300"></canvas>
             <canvas id="hud" width="480" height="300"></canvas>
             <canvas id="mouth" width="480" height="300"></canvas>
-            <div id='instructions' style='opacity:1' ontouchstart='PWG.tipEnd();' onclick='PWG.tipEnd();'>
-            </div>
+            <!--
+            <div id='instructions' style='opacity:1' ></div>-->
+            <div id='instructions' style='opacity:1' ontouchstart='PWG.tipEnd();' onclick='PWG.tipEnd();'></div>
             <div id="hud_screen">
                 <div style="position:absolute;top:0;right:220px;margin:10px;width:150px">
                     <div class="hud_button" id="bmusic" ontouchstart='menu.toggleAudio();' onclick='menu.toggleAudio();'></div>
@@ -204,15 +205,26 @@
             fullScreen();
         }
 
+        // if (window.location.host == "laysmax201.ts13.ompchina.net") {
+        //     //百度代码：laysmax201.ts13.ompchina.net
+        //     var _hmt = _hmt || [];
+        //     (function() {
+        //         var hm = document.createElement("script");
+        //         hm.src = "//hm.baidu.com/hm.js?13460039d4e07b1189ab1b8cb443fa81";
+        //         var s = document.getElementsByTagName("script")[0];
+        //         s.parentNode.insertBefore(hm, s);
+        //     })();
+        // } else {
+            //百度代码：laysmax2015.ompchina.net
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?8eee0978707e0cc2e3fdfcc0a4687c4c";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
 
-        //百度的代码
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?8eee0978707e0cc2e3fdfcc0a4687c4c";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
+        // }
         </script>
     </div>
 </body>

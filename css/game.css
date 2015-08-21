@@ -23,15 +23,31 @@ body.needRotate:before{
     content: " ";
     position: absolute;
     z-index: 9999;
-    width: 100%;
-    height: 100%;
-    background-size:contain;
+    width: 480px;
+    height: 300px;
+    left:50%;
+    top:50%;
+    margin-left: -240px;
+    margin-top: -150px;
+    background-size:208px 205px;
     background:transparent url('../art/rotateHint.png') no-repeat scroll center center;
 
     -webkit-animation-name: rotation;
     -webkit-animation-duration: 3s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
+
+    -o-animation-name: rotation;
+    -o-animation-duration: 3s;
+    -o-animation-timing-function: linear;
+    -o-animation-iteration-count: infinite;
+
+    -moz-animation-name: rotation;
+    -moz-animation-duration: 3s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+
     animation-name: rotation;
     animation-duration: 3s;
     animation-timing-function: linear;
@@ -145,7 +161,28 @@ img {
         -webkit-transform:rotate(-90deg)  ;
     }
 }
-
+@-moz-keyframes rotation {
+    0% {
+        -moz-transform:rotate(-90deg)  ;
+    }
+    50% {
+        -moz-transform:rotate(0deg)  ;
+    }
+    100% {
+        -moz-transform:rotate(-90deg)  ;
+    }
+}
+@-o-keyframes rotation {
+    0% {
+        -o-transform:rotate(-90deg)  ;
+    }
+    50% {
+        -o-transform:rotate(0deg)  ;
+    }
+    100% {
+        -o-transform:rotate(-90deg)  ;
+    }
+}
 @keyframes rotation {
     0% {
         transform:rotate(-90deg)  ;
@@ -197,8 +234,8 @@ img {
 
 #screen > #shade {
     background-color: #000;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 #screen > #invite {
 	display: none;
