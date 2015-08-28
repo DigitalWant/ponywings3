@@ -162,12 +162,10 @@
             var width = 300 * scale;
             var height = 480 * scale;
 
-            console.log(width,height);
-
             $minisite.css({
                 scale: [scale, scale],
                 rotate: 90,
-                left: width,
+                left: (width + domwidth) / 2,
                 top: -(height - domheight) / 2
             });
 

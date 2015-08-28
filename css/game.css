@@ -85,6 +85,9 @@ canvas,
     left: 0;
 }
 
+#screen {
+    z-index: 999;
+}
 img {
     border: 0;
 }
