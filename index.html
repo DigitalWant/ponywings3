@@ -186,16 +186,17 @@
 
         }   
 
-        PWG.loadArtAssets();
-        PWG.init();
+    
     }
 
     $minisite = $('#minisite');
     $gameContent = $("#content");
-    $(window).resize(onResize);
+    //$(window).resize(onResize);
     onResize();
 
-
+    PWG.loadArtAssets();
+    PWG.init();
+    
     // function fullScreen() {
 
     //     var viewportWidth = window.innerWidth;
