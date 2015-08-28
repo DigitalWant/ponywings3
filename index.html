@@ -36,8 +36,8 @@
 </head>
 
 <body onkeydown="if(gameIsLoaded){ kCont.keyDownHandler(event); }" onkeyup="if(gameIsLoaded){ kCont.keyUpHandler(event); }" onblur="if(gameIsLoaded){ kCont.down=false; menu.pause(); }" onmousedown="if(gameIsLoaded){ if(event.pageX<360||event.pageY>45){ kCont.down = true; } }" onmouseup="if(gameIsLoaded){ kCont.down = false; }" ontouchstart="if(gameIsLoaded){ if(event.touches[0].pageX<360||event.touches[0].pageY>45){ kCont.down = true; } } BlockMove(event);" ontouchend="if(gameIsLoaded){ kCont.down = false; }" ontouchcancel="if(gameIsLoaded){ kCont.down = false; }">
-    <div class="site-body">
-        <div id="minisite">
+<!--     <div class="site-body">
+        <div id="minisite"> -->
             <div id="content">
                 <!-- CANVAS DOM -->
                 <div id="background">
@@ -118,8 +118,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+<!--         </div>
+    </div> -->
     <!-- Import JS files -->
     <script src="src/HUD.js"></script>
     <script src="src/Mouth.js"></script>
@@ -166,7 +166,7 @@
                 scale: [scale, scale],
                 rotate: 90,
                 left: (width + domwidth) / 2,
-                top: -(height - domheight) / 2
+                top: -(height - domheight) / 3
             });
 
         } else {
@@ -179,7 +179,7 @@
                 scale: [scale, scale],
                 rotate: 0,
                 left: -(width - domwidth) / 2,
-                top: -(height - domheight) / 2
+                top: -(height - domheight) / 3
             });
 
         }   
@@ -187,8 +187,7 @@
     
     }
 
-    $minisite = $('#minisite');
-    $gameContent = $("#content");
+    $minisite = $('#content');
     $(window).resize(onResize);
     onResize();
 
