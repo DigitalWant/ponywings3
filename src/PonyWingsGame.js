@@ -3,10 +3,10 @@ PWG.timer_enterFrame = null;
 PWG.timer_draw = null;
 PWG.playGame = function() {
     //console.log(PWG.timer_enterFrame,PWG.timer_draw);
-    if (PWG.timer_enterFrame == null){
+    //if (PWG.timer_enterFrame == null){
         PWG.timer_enterFrame = setInterval(PWG.enterFrame, enterFrameRate);
         PWG.timer_draw = setInterval(PWG.draw, drawFrameRate);        
-    }
+    //}
 
 }
 PWG.pauseGame = function() {
@@ -87,7 +87,7 @@ PWG.init = function() {
 
 }
 
-PWG.artAssets = 10;
+PWG.artAssets = 9;
 PWG.loadArtAssets = function() {
 
     if (gameIsMobile) {
@@ -184,6 +184,9 @@ PWG.startTheGame = function() {
     PWG.enterFrame();
     PWG.draw();
     PWG.playGame();
+    music.play();
+    menu.toggleAudio();
+    
     document.getElementById("screen").style.display = "none";
     document.getElementById("invite").style.display = "block";
 
